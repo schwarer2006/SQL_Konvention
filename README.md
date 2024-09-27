@@ -24,9 +24,7 @@ WHERE is_active = 1;
 
 Hier ist das Regelwerk komplett und korrekt im Markdown-Format:
 
-markdown
-Code kopieren
-# SQL Programmierstil-Regelwerk
+## SQL Programmierstil-Regelwerk
 
 ## 1. Allgemeine Richtlinien
 - **Verwende immer aussagekräftige und lesbare Namen** für Tabellen, Spalten und Aliase.
@@ -65,7 +63,7 @@ FROM
 WHERE 
     OrderStatus = 'Shipped'
     AND OrderDate >= '2023-01-01';
-5. Joins
+##5. Joins
 Schreibe Joins immer auf separate Zeilen, mit entsprechenden Einrückungen.
 Verwende Aliase, um die Lesbarkeit von Joins zu erhöhen.
 Beispiel:
@@ -79,7 +77,7 @@ FROM
     Orders o
 INNER JOIN 
     Customers c ON o.CustomerID = c.CustomerID;
-6. Kommentare
+##6. Kommentare
 Verwende Einzeilige Kommentare (--) für kurze Anmerkungen.
 Mehrzeilige Kommentare (/* ... */) für ausführlichere Erklärungen oder Dokumentation.
 Beispiele:
@@ -96,7 +94,7 @@ SELECT * FROM Orders;
 SELECT * 
 FROM Customers 
 WHERE IsActive = 1;
-7. Dokumentation
+##7. Dokumentation
 Schreibe eine kurze Beschreibung jeder SQL-Prozedur, Funktion oder View.
 Verwende Markdown, um Code und Kommentare übersichtlich zu gestalten.
 Dokumentiere Eingabe- und Ausgabeparameter sowie Rückgabewerte.
@@ -110,8 +108,8 @@ Code kopieren
   - `@CustomerID` (int): Die ID des Kunden
 - **Rückgabewerte**: 
   - `OrderID`, `OrderDate`, `TotalAmount`
-sql
-Code kopieren
+
+
 CREATE PROCEDURE GetCustomerOrders (@CustomerID INT)
 AS
 BEGIN
@@ -119,7 +117,7 @@ BEGIN
     FROM Orders 
     WHERE CustomerID = @CustomerID;
 END;
-8. Best Practices
+##8. Best Practices
 Verwende JOIN-Bedingungen anstelle von Subselects, wenn möglich.
 Nutze EXISTS anstelle von IN für bessere Leistung bei Abfragen mit großen Datenmengen.
 **Vermeide SELECT ***: Gib explizit die benötigten Spalten an.
