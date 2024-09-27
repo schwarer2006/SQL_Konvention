@@ -123,4 +123,3 @@ Nutze EXISTS anstelle von IN für bessere Leistung bei Abfragen mit großen Date
 **Vermeide SELECT ***: Gib explizit die benötigten Spalten an.
 Code kopieren
 
-Du kannst dieses Markdown-Dokument jet
